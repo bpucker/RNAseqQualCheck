@@ -72,4 +72,27 @@ Optional:
 
 
 ![RNA-seq coverage across transcripts](https://github.com/bpucker/RNAseqQualCheck/blob/main/RNAseq_coverage_across_transcripts.png?raw=true)
- 
+
+
+
+## Dependencies ##
+[Python3](https://www.python.org/downloads/) with standard modules is required to run this analysis. Plotting is based on matplotlib and seaborn.
+```
+sudo apt update
+sudo apt install python3
+```
+
+[Samtools](http://www.htslib.org/) is needed to handle BAM files.
+```
+sudo apt update
+sudo apt install samtools
+```
+
+
+[Bedtools](https://bedtools.readthedocs.io/en/latest/) is needed to calculate coverage values.
+```
+sudo apt update
+sudo apt install bedtools
+```
+
+
