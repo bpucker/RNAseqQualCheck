@@ -38,12 +38,39 @@ Example:
 ## RNA-seq coverage across transcripts analysis ##
 This script analyzes the coverage of RNA-seq reads across transcripts. The results allow conclusions about the quality of the processed sample.
 
+```
+Usage1
+python3 read_distr_checker.py --bam <FILE> --gff <FILE> --out <DIR>
+
+Usage2
+python3 read_distr_checker.py --cov <FILE> --gff <FILE> --out <DIR>
+
+Mandatory:
+--bam        STR   BAM input file    |  --cov   STR    Coverage input file
+--gff        STR   GFF input file
+--out        STR   Output folder
+
+Optional:
+--sample     STR    Sample name
+--samtools   STR    Path to samtools [samtools]
+--bedtools   STR    Path to bedtools [bedtools]
+--chunks     INT    Number of chunks [100]
+--minexpcut  INT    Minimal coverage [100]
+```
+
+`--fastq` specifies a FASTQ input file that is analyzed. Each read is checked for the presence of rRNA sequence k-mers.
 
 
 
 ![RNA-seq coverage across transcripts](https://github.com/bpucker/RNAseqQualCheck/blob/main/RNAseq_coverage_across_transcripts.png?raw=true)
 
 
+	optional:
+	--sample <NAME_OF_EACH_SAMPLE>
+	--samtools <SAMTOOLS_PATH>[samtools]
+	--bedtools <BED_TOOLS_PATH>[genomeCoverageBed]
+	--chunks <NUMBER_OF_CHUNKs>[100]
+	--minexpcut <MIN_CUMULATIVE_COVERAGE_TO_CONSIDER_TRANSCRIPT>[100]
 
 
-
+ 
