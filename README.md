@@ -30,6 +30,18 @@ Optional:
 `--cutoff` specifies the number of k-mers that need to be detected in a read in order to classify it as rRNA read. Default is 3.
 
 
+Example:
+
+![rRNA content](https://github.com/bpucker/RNAseqQualCheck/blob/main/rRNA_content_example.png?raw=true)
+
+
+## RNA-seq coverage across transcripts analysis ##
+
+
+
+![RNA-seq coverage across transcripts](https://github.com/bpucker/RNAseqQualCheck/blob/main/RNAseq_coverage_across_transcripts.png?raw=true)
+
+
 
 
 
