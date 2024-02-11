@@ -1,5 +1,5 @@
 # RNAseqQualCheck
-script to assess the quality of RNAseq data sets
+This repository contains script to assess the quality of RNAseq data sets.
 
 
 ## rRNA check ##
@@ -36,6 +36,8 @@ Example:
 
 
 ## RNA-seq coverage across transcripts analysis ##
+This script analyzes the coverage of RNA-seq reads across transcripts. The results allow conclusions about the quality of the processed sample.
+
 
 
 
