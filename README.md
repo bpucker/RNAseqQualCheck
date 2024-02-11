@@ -38,6 +38,7 @@ Example:
 ## RNA-seq coverage across transcripts analysis ##
 This script analyzes the coverage of RNA-seq reads across transcripts. The results allow conclusions about the quality of the processed sample.
 
+
 ```
 Usage1
 python3 read_distr_checker.py --bam <FILE> --gff <FILE> --out <DIR>
@@ -58,19 +59,17 @@ Optional:
 --minexpcut  INT    Minimal coverage [100]
 ```
 
-`--fastq` specifies a FASTQ input file that is analyzed. Each read is checked for the presence of rRNA sequence k-mers.
+`--bam` specifies a BAM input file. This will be converted into a coverage file (COV) to analyze the distribution of reads across transcripts. This argument can also be used to provide a comma-separated list of files for automatic processing of large batches of files.
+`--cov` specifies a COV input file. This file is the basis to analyze the distribution of reads across transcripts. This argument can also be used to provide a comma-separated list of files for automatic processing of large batches of files.
+`--gff` specifies a GFF input file. This file is processed to identify the positions of exons that form an intron. 
+`--out` specifies an output folder. If this folder does not exist, it will be created.
 
+`--sample` specifies sample names. This argument can also be used to provide a comma-separated list of sample names for automatic processing of large batches of files. The length of this list should match the number of BAM/COV files provided.
+`--samtools` specifies the full path to samtools. Default: samtools.
+`--bedtools` specifies the full path to genomeCoverageBed. Default: genomeCoverageBed.
+`--chunks` specifies the number of chunks to create for each transcript when assessing the coverage. Default: 100. Only transcripts with at least this length will be considered for the analysis.
+`--minexpcut` specifies the minimal total number of sequenced basis. Only transcripts with at least this number of sequenced bases is considered for the analysis.
 
 
 ![RNA-seq coverage across transcripts](https://github.com/bpucker/RNAseqQualCheck/blob/main/RNAseq_coverage_across_transcripts.png?raw=true)
-
-
-	optional:
-	--sample <NAME_OF_EACH_SAMPLE>
-	--samtools <SAMTOOLS_PATH>[samtools]
-	--bedtools <BED_TOOLS_PATH>[genomeCoverageBed]
-	--chunks <NUMBER_OF_CHUNKs>[100]
-	--minexpcut <MIN_CUMULATIVE_COVERAGE_TO_CONSIDER_TRANSCRIPT>[100]
-
-
  
