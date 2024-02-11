@@ -80,6 +80,8 @@ Optional:
 ```
 sudo apt update
 sudo apt install python3
+sudo pip3 install matplotlib
+sudo pip3 install seaborn
 ```
 
 [Samtools](http://www.htslib.org/) is needed to handle BAM files.
