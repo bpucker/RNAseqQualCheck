@@ -1,6 +1,6 @@
 ### Boas Pucker ###
 ### b.pucker@tu-bs.de ###
-### v0.1 ###
+### v0.15 ###
 
 #coverage file construction taken from: Pucker & Brockington, 2018: https://doi.org/10.1186/s12864-018-5360-z
 
@@ -290,7 +290,7 @@ def main( arguments ):
 			bam_files = bam_file.split(',')
 		else:
 			bam_files = [ bam_file ]
-		coverage_files = []
+		cov_files = []
 		for idx, bam_file in enumerate( bam_files ):
 			cov_file = output_folder + samples[idx] + ".cov"
 			if not os.path.isfile( cov_file ):
@@ -299,7 +299,7 @@ def main( arguments ):
 				construct_cov_file( bam_file, cov_file, samtools, bedtools, bam_sorted  )
 				sys.stdout.write( "...done\n" )
 				sys.stdout.flush()
-			coverage_files.append( cov_file )
+			cov_files.append( cov_file )
 	else:
 		cov_file = arguments[ arguments.index('--cov')+1 ]
 		if "," in cov_file:
