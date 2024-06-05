@@ -1,6 +1,6 @@
 ### Boas Pucker ###
 ### b.pucker@tu-bs.de ###
-### v0.15 ###
+### v0.16 ###
 
 #coverage file construction taken from: Pucker & Brockington, 2018: https://doi.org/10.1186/s12864-018-5360-z
 
@@ -11,6 +11,7 @@ __usage__ = """
 	--out <FULL_PATH_TO_OUTPUT_DIRECTORY>
 	
 	optional:
+	--bam_is_sorted <PREVENTS_SORTING_OF_BAM>[False]
 	--sample <NAME_OF_EACH_SAMPLE>
 	--samtools <SAMTOOLS_PATH>[samtools]
 	--bedtools <BED_TOOLS_PATH>[genomeCoverageBed]
